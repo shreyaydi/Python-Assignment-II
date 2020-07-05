@@ -11,7 +11,11 @@ def calculator(num1,num2, operator):
     if operator == '*':
         return num1*num2
     if operator == '/':
-        return num1/num2
+        try:
+            return num1 / num2
+        except ZeroDivisionError:
+            return None
+
     else:
         return 'invalid operator'
 
